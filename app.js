@@ -1767,7 +1767,8 @@ function adjustIframeHeight() {
         log('警告：无法调整iframe高度 - PWA模式或iframe元素未初始化');
         return;
     }
-    
+    //设置html高度
+    document.getElementById('domHtml').style.height=screen.height+'px'
     // 简化方案：直接使用100vh，让CSS padding处理安全区域
     mainIframe.style.top = '0';
     mainIframe.style.left = '0';
